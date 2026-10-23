@@ -3,6 +3,13 @@
   "main": "src/worker.js",
   "compatibility_date": "2026-06-01",
   "workers_dev": true,
+  // Old nexvora.company hosts stay attached until that domain expires (2027-09-14); a Redirect Rule on its zone sends them to .com.my.
+  "routes": [
+    { "pattern": "nexvora.com.my", "custom_domain": true },
+    { "pattern": "www.nexvora.com.my", "custom_domain": true },
+    { "pattern": "nexvora.company", "custom_domain": true },
+    { "pattern": "www.nexvora.company", "custom_domain": true }
+  ],
   "assets": {
     "directory": ".",
     "binding": "ASSETS",
